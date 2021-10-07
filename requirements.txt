@@ -1,0 +1,5 @@
+telethon
+pymongo
+pycoingecko
+dnspython
+selenium-wire

@@ -1,0 +1,8 @@
+tests.py
+__pycache_*
+.vscod*
+sessionFil*
+*.zip
+chromedriver
+tests.py
+config.json*

@@ -3,7 +3,6 @@ import asyncio
 import aiohttp
 from datetime import datetime as dt
 from seleniumwire import webdriver
-from selenium import webdriver as puredriver
 
 
 class DextoolsAPI:
@@ -11,10 +10,8 @@ class DextoolsAPI:
         self._base_url = "https://www.dextools.io"
         self._pair_addr = "0x921ae85c25550a39b80b9a55f70bc364e8c44c1c"
         self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
-        self.options = puredriver.ChromeOptions()
+        self.options = webdriver.ChromeOptions()
         self.options.add_argument('--no-sandbox')
-        self.options.add_argument("--full-screen")
-        self.options.add_argument("disable-notifications")
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-logging')
         self.options.add_argument('--disable-gpu')

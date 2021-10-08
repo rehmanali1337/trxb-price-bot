@@ -9,7 +9,7 @@ class DextoolsAPI:
     def __init__(self):
         self._base_url = "https://www.dextools.io"
         self._pair_addr = "0x921ae85c25550a39b80b9a55f70bc364e8c44c1c"
-        self._pair_url = f"https://www.dextools.io/app/ether/pair-explorer/{self._pair_addr}"
+        self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
         self.options = webdriver.ChromeOptions()
         self.options.add_argument('--no-sandbox')
         self.options.add_argument("--full-screen")

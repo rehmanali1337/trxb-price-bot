@@ -2,7 +2,7 @@ from pprint import pprint
 import asyncio
 import aiohttp
 from datetime import datetime as dt
-from selenium import webdriver
+from seleniumwire import webdriver
 
 
 class DextoolsAPI:

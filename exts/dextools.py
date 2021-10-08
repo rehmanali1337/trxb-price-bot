@@ -11,7 +11,7 @@ class DextoolsAPI:
         self._pair_addr = "0x921ae85c25550a39b80b9a55f70bc364e8c44c1c"
         self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
         self.options = webdriver.ChromeOptions()
-        self.options.add_argument('--no-sandbox')
+        # self.options.add_argument('--no-sandbox')
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--disable-dev-shm-using')
@@ -19,7 +19,7 @@ class DextoolsAPI:
         self.options.add_argument("disable-notifications")
         # self.options.add_argument('--disable-logging')
         self.options.add_argument('--remote-debugging-port=9222')
-        # self.options.add_argument('--disable-setuid-sandbox')
+        self.options.add_argument('--disable-setuid-sandbox')
         self._driver = webdriver.Chrome(
             executable_path="/usr/bin/chromedriver", options=self.options)
         self._driver.request_interceptor = self.interceptor

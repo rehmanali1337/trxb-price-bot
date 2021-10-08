@@ -33,6 +33,7 @@ class DextoolsAPI:
         print('New request')
         token = request.headers["Authorization"]
         if token is not None and token != "Bearer null":
+            print('Headers found!')
             print(self._headers)
             self._headers = request.headers
 

@@ -38,7 +38,13 @@ class DextoolsAPI:
             self._headers = request.headers
 
     async def get_latest_pirce(self):
+        count = 1
         while not self._headers:
+            count += 1
+            if count > 20:
+                print('Refreshing ....')
+                self.driver.get(self._pair_url)
+                count = 0
             await asyncio.sleep(0.5)
             print('No headers')
 

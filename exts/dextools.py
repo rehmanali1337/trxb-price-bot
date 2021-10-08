@@ -43,7 +43,7 @@ class DextoolsAPI:
             count += 1
             if count > 20:
                 print('Refreshing ....')
-                self.driver.get(self._pair_url)
+                self._driver.get(self._pair_url)
                 count = 0
             await asyncio.sleep(0.5)
             print('No headers')

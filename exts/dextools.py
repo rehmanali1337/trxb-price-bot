@@ -25,7 +25,7 @@ class DextoolsAPI:
         self._driver.request_interceptor = self.interceptor
         self._headers = None
         self._driver.get(self._pair_url)
-        assert self._headers is not None
+        # assert self._headers is not None
         self._session = None
         print('Browser loaded!')
 

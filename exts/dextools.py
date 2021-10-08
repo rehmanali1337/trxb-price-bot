@@ -2,7 +2,7 @@ from pprint import pprint
 import asyncio
 import aiohttp
 from datetime import datetime as dt
-from seleniumwire import webdriver
+from selenium import webdriver
 
 
 class DextoolsAPI:
@@ -11,7 +11,7 @@ class DextoolsAPI:
         self._pair_addr = "0x921ae85c25550a39b80b9a55f70bc364e8c44c1c"
         self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
         self.options = webdriver.ChromeOptions()
-        # self.options.add_argument('--no-sandbox')
+        self.options.add_argument('--no-sandbox')
         self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--disable-dev-shm-using')

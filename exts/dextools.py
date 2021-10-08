@@ -12,8 +12,10 @@ class DextoolsAPI:
         self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
         self.options = webdriver.ChromeOptions()
         self.options.add_argument('--no-sandbox')
+        self.options.add_argument("--full-screen")
+        self.options.add_argument("disable-notifications")
         self.options.add_argument('--headless')
-        self.options.add_argument('--disable-logging')
+        # self.options.add_argument('--disable-logging')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--disable-dev-shm-using')
         self.options.add_argument('--remote-debugging-port=9222')

@@ -18,7 +18,7 @@ class DextoolsAPI:
         self.options.add_argument("--full-screen")
         self.options.add_argument("disable-notifications")
         # self.options.add_argument('--disable-logging')
-        self.options.add_argument('--remote-debugging-port=9222')
+        self.options.add_argument('--remote-debugging-port=9230')
         self.options.add_argument('--disable-setuid-sandbox')
         self._driver = webdriver.Chrome(
             executable_path="/usr/bin/chromedriver", options=self.options)

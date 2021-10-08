@@ -17,7 +17,7 @@ class DextoolsAPI:
         self.options.add_argument('--disable-dev-shm-using')
         self.options.add_argument("--full-screen")
         self.options.add_argument("disable-notifications")
-        # self.options.add_argument('--disable-logging')
+        self.options.add_argument('--disable-logging')
         self.options.add_argument('--remote-debugging-port=9230')
         self.options.add_argument('--disable-setuid-sandbox')
         self._driver = webdriver.Chrome(
@@ -30,10 +30,10 @@ class DextoolsAPI:
         print('Browser loaded!')
 
     def interceptor(self, request):
+        print('New request')
         token = request.headers["Authorization"]
-        if token is None or token == "Bearer null":
-            return
-        else:
+        if token is not None and token != "Bearer null":
+            print(self._headers)
             self._headers = request.headers
 
     async def get_latest_pirce(self):

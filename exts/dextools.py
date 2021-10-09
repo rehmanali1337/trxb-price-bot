@@ -3,6 +3,7 @@ import asyncio
 import aiohttp
 from datetime import datetime as dt
 from seleniumwire import webdriver
+from pyvirtualdisplay import Display
 
 
 class DextoolsAPI:
@@ -12,7 +13,7 @@ class DextoolsAPI:
         self._pair_url = f"{self._base_url}/app/ether/pair-explorer/{self._pair_addr}"
         self.options = webdriver.ChromeOptions()
         self.options.add_argument('--no-sandbox')
-        self.options.add_argument('--headless')
+        # self.options.add_argument('--headless')
         self.options.add_argument('--disable-gpu')
         self.options.add_argument('--disable-dev-shm-using')
         self.options.add_argument("--full-screen")
@@ -21,6 +22,8 @@ class DextoolsAPI:
         self.options.add_argument('--remote-debugging-port=9230')
         self.options.add_argument('--disable-setuid-sandbox')
         self.options.add_argument(f"user-data-dir=Session")
+        disp = Display()
+        disp.start()
         self._driver = webdriver.Chrome(
             executable_path="/usr/bin/chromedriver", options=self.options)
         self._driver.request_interceptor = self.interceptor
@@ -44,7 +47,8 @@ class DextoolsAPI:
             count += 1
             if count > 20:
                 print('Refreshing ....')
-                self._driver.get(self._pair_url)
+                # self._driver.get(self._pair_url)
+                print(self._driver.page_source)
                 count = 0
             await asyncio.sleep(0.5)
             print('No headers')

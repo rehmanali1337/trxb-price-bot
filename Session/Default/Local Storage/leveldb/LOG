@@ -1,0 +1,8 @@
+2021/10/09-20:33:39.526 d8f Reusing MANIFEST /home/virchual/telegramBots/group_message_filter/Session/Default/Local Storage/leveldb/MANIFEST-000001
+2021/10/09-20:33:39.527 d8f Recovering log #3
+2021/10/09-20:33:39.532 d8f Level-0 table #3: started
+2021/10/09-20:33:39.552 d8f Level-0 table #3: 779818 bytes OK
+2021/10/09-20:33:39.553 d8f Recovering log #4
+2021/10/09-20:33:39.553 d8f Reusing old log /home/virchual/telegramBots/group_message_filter/Session/Default/Local Storage/leveldb/000004.log 
+2021/10/09-20:33:39.556 d8f Delete type=0 #3
+2021/10/09-20:33:39.556 d8f Delete type=2 #5

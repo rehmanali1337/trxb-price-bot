@@ -1,0 +1,7 @@
+[3443:3443:1009/203339.473225:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[3392:3392:1009/203339.694402:INFO:CONSOLE(0)] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: chrome://resources/roboto/roboto-regular.woff2", source: chrome://new-tab-page/ (0)
+[3392:3392:1009/203340.030991:INFO:CONSOLE(0)] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: chrome://resources/roboto/roboto-medium.woff2", source: chrome://new-tab-page/ (0)
+[3392:3392:1009/203347.596945:INFO:CONSOLE(1)] "App stable: false", source: https://www.dextools.io/app/main-es2015.17f1608a39188d62d9a4.js (1)
+[3392:3392:1009/203347.729083:INFO:CONSOLE(1)] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://www.dextools.io/app/fontawesome-webfont.20fd1704ea223900efa9.woff2?v=4.7.0", source: https://www.dextools.io/app/vendor-es2015.78b4e104c92fbc5c1626.js (1)
+[3443:3443:1009/203351.562367:ERROR:connection.cc(66)] X connection error received.
+[3443:3451:1009/203351.562717:ERROR:connection.cc(66)] X connection error received.

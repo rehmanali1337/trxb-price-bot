@@ -107,6 +107,6 @@ async def price(event: events.NewMessage):
     sent = await event.respond("Please wait while fetching latest price from the network ..")
     data = await dex_api.get_latest_pirce()
     message = f"USD Price : {data['result'][-1]['price']} USD"
-    price_eth = '{:.18f}'.format(data["result"][-1]["priceETH"])
-    message = f'{message}\nETH Price : {price_eth} ETH'
+    # price_eth = '{:.18f}'.format(data["result"][-1]["priceETH"])
+    # message = f'{message}\nETH Price : {price_eth} ETH'
     await sent.edit(message)

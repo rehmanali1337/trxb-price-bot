@@ -62,7 +62,7 @@ class DextoolsAPI:
                 print(response.content)
                 print(await response.json())
                 return await self.get_latest_pirce()
-            if "result" not in await response.json().keys():
+            if "result" not in (await response.json()).keys():
                 print(await response.json())
                 return await self.get_latest_pirce()
             res = await response.json()

@@ -34,11 +34,11 @@ class DextoolsAPI:
         print('Browser loaded!')
 
     def interceptor(self, request):
-        print('New request')
+        # print('New request')
         token = request.headers["Authorization"]
         if token is not None and token != "Bearer null":
-            print('Headers found!')
-            print(self._headers)
+            # print('Headers found!')
+            # print(self._headers)
             self._headers = request.headers
 
     async def get_latest_pirce(self):

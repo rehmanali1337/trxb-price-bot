@@ -57,6 +57,14 @@ class DextoolsAPI:
             self._session = aiohttp.ClientSession()
         URL = f'{self._base_url}/chain-ethereum/api/uniswap/1/pairexplorer?v=1.19.0&pair={self._pair_addr}&ts={dt.now().timestamp()}-0'
         async with self._session.get(URL, headers=self._headers) as response:
+            if response.status != 200:
+                print(response.status)
+                print(response.content)
+                print(await response.json())
+                return await self.get_latest_pirce()
+            if "result" not in response.json().keys():
+                print(await response.json())
+                return await self.get_latest_pirce()
             res = await response.json()
             return res
 
